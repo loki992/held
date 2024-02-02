@@ -13,7 +13,7 @@
 
 </head>
 <body>
-
+<div class="h-100 d-flex align-items-center justify-content-center">
 <form action="/login" role="form" method="post">
     <div class="form-outline mb-4">
         <input type="text" id="loginform" name="login" class="form-control" />
@@ -23,10 +23,11 @@
     <div class="form-outline mb-4">
         <input type="password" id="passform" name="password" class="form-control" />
         <label class="form-label" for="passform">Password</label>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
     </div>
+</div>
 
-
-    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
 </form>
 
 

@@ -26,6 +26,7 @@ public class SecurityConfig {
                         .dispatcherTypeMatchers(FORWARD, ERROR).permitAll()
                         .requestMatchers("/newUser").hasRole("ADMIN")
                         .requestMatchers("/login").permitAll()
+                        .requestMatchers("/js/*").permitAll()
                         .anyRequest()
                         .authenticated()
                 )

@@ -21,11 +21,15 @@
             </li>
 
             <li class="nav-item">
-                <a href="newUser" class="nav-link">Create New User</a>
+                <a href="/newUser" class="nav-link">Create New User</a>
             </li>
 
             <li class="nav-item">
-                <a href="showAllGames" class="nav-link">Show All Games</a>
+                <a href="/showAllGames" class="nav-link">Show All Games</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/groupcall" class="nav-link">Enter Room</a>
             </li>
 
         </ul>

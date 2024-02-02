@@ -12,10 +12,12 @@ public class HomeController {
 
         return "index";
     }
+
     @GetMapping("/login")
     public String login() {
         return "signInForm";
     }
+
     @GetMapping("/admin")
     public String admin() {
         return "admin";
@@ -25,5 +27,10 @@ public class HomeController {
     public String logout() {
         return "redirect:/login";
     }
-}
 
+    @GetMapping("/groupcall")
+    public String groupcall() {
+        return "groupcall";
+    }
+
+}

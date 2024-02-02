@@ -63,6 +63,7 @@ public class CharacterController {
                                Model model,
                                RedirectAttributes redirectAttributes) {
         Character character = new Character();
+        character.setSevereWound(false);
         character.setUser(userDao.getReferenceById(user));
         character.setAge(age);
         character.setBirthCity(birthPlace);
@@ -108,7 +109,6 @@ public class CharacterController {
         Character character = characterDao.getReferenceById(Long.valueOf(characterId));
         model.addAttribute("character", character);
         model.addAttribute("owner", userDao.getReferenceById(character.getUser().getId()));
-        System.out.println(character.getId());
 
         return "showCharacterSheet";
     }
