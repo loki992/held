@@ -17,14 +17,14 @@
 
 package pl.held.groupcall;
 
-import org.springframework.web.socket.WebSocketSession;
-
 import java.util.concurrent.ConcurrentHashMap;
+
+import org.springframework.web.socket.WebSocketSession;
 
 /**
  * Map of users registered in the system. This class has a concurrent hash map to store users, using
  * its name as key in the map.
- * 
+ *
  * @author Boni Garcia (bgarcia@gsyc.es)
  * @author Micael Gallego (micael.gallego@gmail.com)
  * @authos Ivan Gracia (izanmail@gmail.com)

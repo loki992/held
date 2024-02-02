@@ -59,11 +59,11 @@ function Participant(name) {
 		if (container.className === PARTICIPANT_CLASS) {
 			var elements = Array.prototype.slice.call(document.getElementsByClassName(PARTICIPANT_MAIN_CLASS));
 			elements.forEach(function(item) {
-					item.className = PARTICIPANT_CLASS;
-				});
+				item.className = PARTICIPANT_CLASS;
+			});
 
-				container.className = PARTICIPANT_MAIN_CLASS;
-			} else {
+			container.className = PARTICIPANT_MAIN_CLASS;
+		} else {
 			container.className = PARTICIPANT_CLASS;
 		}
 	}
@@ -76,22 +76,22 @@ function Participant(name) {
 		if (error) return console.error ("sdp offer error")
 		console.log('Invoking SDP offer callback function');
 		var msg =  { id : "receiveVideoFrom",
-				sender : name,
-				sdpOffer : offerSdp
-			};
+			sender : name,
+			sdpOffer : offerSdp
+		};
 		sendMessage(msg);
 	}
 
 
 	this.onIceCandidate = function (candidate, wp) {
-		  console.log("Local candidate" + JSON.stringify(candidate));
+		console.log("Local candidate" + JSON.stringify(candidate));
 
-		  var message = {
-		    id: 'onIceCandidate',
-		    candidate: candidate,
-		    name: name
-		  };
-		  sendMessage(message);
+		var message = {
+			id: 'onIceCandidate',
+			candidate: candidate,
+			name: name
+		};
+		sendMessage(message);
 	}
 
 	Object.defineProperty(this, 'rtcPeer', { writable: true});

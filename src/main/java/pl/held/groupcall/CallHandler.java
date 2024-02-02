@@ -17,9 +17,8 @@
 
 package pl.held.groupcall;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
+import java.io.IOException;
+
 import org.kurento.client.IceCandidate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,10 +28,12 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import java.io.IOException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 
 /**
- * 
+ *
  * @author Ivan Gracia (izanmail@gmail.com)
  * @since 4.3.1
  */
@@ -78,7 +79,7 @@ public class CallHandler extends TextWebSocketHandler {
 
         if (user != null) {
           IceCandidate cand = new IceCandidate(candidate.get("candidate").getAsString(),
-              candidate.get("sdpMid").getAsString(), candidate.get("sdpMLineIndex").getAsInt());
+                  candidate.get("sdpMid").getAsString(), candidate.get("sdpMLineIndex").getAsInt());
           user.addCandidate(cand, jsonMessage.get("name").getAsString());
         }
         break;

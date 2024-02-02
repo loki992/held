@@ -19,7 +19,7 @@
 body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
-    background: no-repeat center url("../../webapp/WEB-INF/views/background.png");
+    background: #0ca3d2;
 }
 
 input[type=checkbox], input[type=radio] {
